@@ -4,3 +4,4 @@ models/
 .env
 .ipynb_checkpoints/
 bert_test_predictions.csv
+.claude/

@@ -158,13 +158,17 @@ Many Neutral errors arise not from obvious polarity failure, but from reviews co
 
 ```
 src/
- ├── config.py
- ├── data_loader.py
- ├── preprocessing.py
- ├── classical_models.py
- ├── bert_model.py
- ├── evaluation.py
- └── interpretability.py
+ ├── config.py            # Dataset sizes, BERT hyperparameters, run flags
+ ├── data_loader.py       # HuggingFace dataset loading and stratified splits
+ ├── preprocessing.py     # Text/label extraction utilities
+ ├── classical_models.py  # TF-IDF + Naive Bayes and Logistic Regression
+ ├── bert_model.py        # BERT fine-tuning with weighted cross-entropy loss
+ ├── evaluation.py        # Classification report and macro-F1 scoring
+ ├── interpretability.py  # Confusion breakdown and neutral error analysis
+ ├── analysis.py          # Standalone post-hoc analysis (loads saved predictions)
+ └── confusion_matrix.py  # Generates interactive Plotly confusion matrix HTML
+outputs/
+ └── bert_confusion_matrix.html  # Interactive confusion matrix (Plotly)
 ```
 
 Key features:
@@ -180,19 +184,15 @@ Key features:
 1. Create environment:
 
 ```
-Install PyTorch with CUDA support following the official PyTorch instructions for your system before running the project.
+conda env create -f environment.yml
+conda activate yelp-nlp
+```
 
 Developed and tested using:
 - Python 3.11
-- PyTorch 2.5.x (CUDA enabled)
-- Transformers 5.3.x
-- HugginFace Datasets 2.x
-
-
-conda create -n yelp-nlp python=3.11
-conda activate yelp-nlp
-pip install -r requirements.txt
-```
+- PyTorch 2.5.1 (CUDA 12.1)
+- Transformers 5.3.0
+- HuggingFace Datasets 4.x
 
 2. Train (optional):
 
@@ -216,6 +216,14 @@ RUN_TRAINING = False
 ```
 
 Loads saved predictions without retraining.
+
+4. Generate interactive confusion matrix:
+
+```
+python src/confusion_matrix.py
+```
+
+Outputs `outputs/bert_confusion_matrix.html` (Plotly, no server required).
 
 ---
 
@@ -241,3 +249,6 @@ This project demonstrates:
 
 The final system achieves strong macro-balanced performance while revealing deeper insights about sentiment intensity and label ambiguity in real-world review data.
 
+---
+
+*Refactored with [Claude Code](https://claude.com/claude-code) — code review, bug fixes, and environment documentation.*

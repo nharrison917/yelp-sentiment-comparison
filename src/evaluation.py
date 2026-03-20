@@ -1,8 +1,6 @@
 # src/evaluation.py
 
-from sklearn.metrics import classification_report, f1_score, confusion_matrix
-import matplotlib.pyplot as plt
-import seaborn as sns
+from sklearn.metrics import classification_report, f1_score
 
 
 def evaluate_model(y_true, y_pred, model_name="Model"):
@@ -21,19 +19,3 @@ def evaluate_model(y_true, y_pred, model_name="Model"):
     print(f"\nMacro F1 Score: {macro_f1:.4f}")
 
     return macro_f1
-
-
-def plot_confusion_matrix(y_true, y_pred, model_name="Model"):
-    """
-    Plot confusion matrix.
-    """
-
-    cm = confusion_matrix(y_true, y_pred)
-
-    plt.figure(figsize=(6, 5))
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
-    plt.title(f"{model_name} Confusion Matrix")
-    plt.xlabel("Predicted")
-    plt.ylabel("Actual")
-    plt.tight_layout()
-    plt.show()

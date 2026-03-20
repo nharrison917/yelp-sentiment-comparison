@@ -17,7 +17,7 @@ if __name__ == "__main__":
     # =========================
     train_df, val_df, test_df = load_and_prepare_data()
     X_train, y_train = get_text_and_labels(train_df)
-    X_test, y_test = get_text_and_labels(test_df)
+    X_test, _ = get_text_and_labels(test_df)  # y_test sourced below to stay aligned with saved predictions
 
 
     # =========================
@@ -43,6 +43,7 @@ if __name__ == "__main__":
 
         test_df = test_df.copy()
         test_df["bert_pred"] = y_pred_bert
+        y_test = test_df["label"].values
 
         trainer.save_model("./models/bert_weighted")
         test_df.to_csv("bert_test_predictions.csv", index=False)
@@ -51,6 +52,7 @@ if __name__ == "__main__":
         print("\nLoading saved BERT predictions...\n")
         test_df = pd.read_csv("bert_test_predictions.csv")
         y_pred_bert = test_df["bert_pred"].values
+        y_test = test_df["label"].values  # use labels from the saved file to guarantee alignment
 
     evaluate_model(y_test, y_pred_bert, model_name="BERT (Weighted)")
 

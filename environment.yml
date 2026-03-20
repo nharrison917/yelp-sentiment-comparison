@@ -1,0 +1,20 @@
+name: yelp-nlp
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.11
+  - pytorch=2.5.1
+  - pytorch-cuda=12.1
+  - torchaudio=2.5.1
+  - torchvision=0.20.1
+  - pip:
+    - transformers==5.3.0
+    - datasets>=4.0
+    - accelerate>=1.0
+    - huggingface-hub>=1.0
+    - scikit-learn>=1.4
+    - pandas>=2.0
+    - numpy>=2.0
+    - plotly>=6.0

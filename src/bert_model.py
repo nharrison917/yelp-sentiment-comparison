@@ -96,7 +96,7 @@ def train_bert(train_df, val_df):
 
     training_args = TrainingArguments(
         output_dir="./models",
-    eval_strategy="epoch",
+        eval_strategy="epoch",
         save_strategy="epoch",
         learning_rate=LEARNING_RATE,
         per_device_train_batch_size=BATCH_SIZE,
