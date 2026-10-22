@@ -1,0 +1,83 @@
+
+Loading saved predictions...
+
+
+Confusion Breakdown:
+
+True: Negative
+  Predicted Negative: 10634
+  Predicted Neutral: 1395
+  Predicted Positive: 271
+
+True: Neutral
+  Predicted Negative: 1106
+  Predicted Neutral: 3972
+  Predicted Positive: 1671
+
+True: Positive
+  Predicted Negative: 182
+  Predicted Neutral: 1544
+  Predicted Positive: 39225
+
+
+Positive -> Neutral:
+
+Count: 1544
+
+================================================================================
+True: Positive | Predicted: Neutral
+Just a suggestion for delivery?  Caller ID so when the number pops up so will the address and the driver can see phone number also
+
+================================================================================
+True: Positive | Predicted: Neutral
+A little disappointed but the flavor is super good! I'm originally from the Bay Area and I'm very used to consistent and delicious Mexican food everywhere. Unfortunately haven't had cheap yet authentic and good Mexican food here especially a burrito until I tried out this place! 7$ for a super carne asada burrito! First bite tasted really good, lots of meat and packed full of flavor. Lots of guac as well but the only thing that disappointed me was that thy forgot everything else :( no rice, no beans, no salsa, just surreal and guac. Not giving them a 3 star because the food is outstanding and tastes authentic. Maybe I'll have a better burrito next time :) also the spicy salsa is SPICY! love it and coming back
+
+================================================================================
+True: Positive | Predicted: Neutral
+You want selection of craft and domestic that's virtually unparalleled in the NW Philly area, Brewers Outlet has it. Prices? Standard/high. I think their mark-up is probably standard, and therefore competitive, and I guess I tend to gravitate toward the craftiest of crafts, but yeah, I'll keep going here until I stop drinking beer probably.
+
+
+Negative -> Neutral:
+
+Count: 1395
+
+================================================================================
+True: Negative | Predicted: Neutral
+I am a HUGE Chipotle fan and this location is an exception to everything else I've experienced. Less than stellar experience.
+
+#1 - I always order vegetarian. I have found meat in my bowl 3 different visits. That tells me that they're dropping meat and cross contaminating in all the food.
+#2 - They don't listen to my request. When I say, "a little bit of medium salsa," they just dump an entire scoop. 
+#3 - They wear gloves, but they handle the food way too much. i.e. back to #1. I order meet free - they're touching the meat of the person in front of me and then they're handling/ touching my veggies right after that. I HATE IT! Quit touching my food.
+
+We continue to go back because it's the closest to where we live, but I'd happily take a different Chipotle if there was another close option.
+
+================================================================================
+True: Negative | Predicted: Neutral
+I went here to have dinner recenntly bcuz it was highly recommended needless to say I was not satisfied. I was on waitlist and still had to wait we were put in the back of the restaurant where there was no heat because there was no sitting for my party of 7 inside. My kids were freezing. My food came out with little to no sauce so all I had was a plate of boiled macroni.  Had to request extra sauce.  
+The waiter was attentive, polite and very nice. Will I go back. Yes, but probably not to the location on Speedway!!
+
+================================================================================
+True: Negative | Predicted: Neutral
+As an avid admirer of anyone who spends time to make BBQ, especially in a place like Uptown I had been supremely excited about this restaurant from the moment I saw construction begin.  The only thing making this style of restaurant better was living on the same block.  Early on I was dazzled by the decor and tasty food.  The quality was quite high and there seemed to be a lot of care put into the food and presentation.  I must admit that I find the moniker "Shane-made" (versus house-made, etc.) to be slightly pretentious, though I really liked the sentiment that items were scratch-made.  
+
+Attributable to higher-than-humble pricing, our visits have waned over time, though it's been a place where we'll regularly eat when we need a close restaurant and want something nicer.  Last night was one such occasion.  I must admit I feel badly for not previously writing a positive review for our various earlier visits, but I don't regularly contribute-- just for the exceptional visit (be it positive or negative).  Unfortunately, last night was quite a memorably bad visit.  
+
+While pressed for getting food as the hour was later, and we were still working we ordered some food to pick up around the block.  The wait staff managed to put us on hold for an unreasonable amount of time (greater than 5 minutes) before having we had to call back to place an order.  As we ordered they seemed confused about the availability of a sandwich and had to trade off to another server.  This isn't a huge problem, though speaks of the lack of service that others have commented on.  The food was the real issue.
+
+My sandwich was placed not only on stale, but badly charred bread with cold meat.  The cole slaw and potato salad sides must have been the last of a batch with the cole slaw being nearly rancid (and completely inedible) and the potato salad (very tasty) but comprised of more sauce than potatoes.  
+
+With all his accolades, I find it hard to believe the quality control over these "Shane-made" offerings.  A nearly $30 sandwich dinner was really an insult to receive-- especially coming from a friendly neighborhood establishment.  This is a real shame as previously I was proud to bring friends and visitors there for a nice meal.  
+
+***As a side note, should the owners ever read this, us neighbors would very much appreciate if they could help patrol patrons who illegally park in front.  This blocks our viewing when trying to leave and has caused several near-miss accidents.
+
+
+Comparative Language Rates:
+Misclassified: 0.045
+Correctly classified: 0.028
+
+Error Structure:
+Total errors: 6169
+Polarity flips (Neg<->Pos): 453 (7.3%)
+Adjacent-class errors: 5716 (92.7%)
+
+Macro F1 95% bootstrap CI (1000 resamples): [0.8007, 0.8090]
