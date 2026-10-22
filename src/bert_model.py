@@ -17,12 +17,15 @@ from config import MODEL_NAME, MAX_LENGTH, BATCH_SIZE, LEARNING_RATE, EPOCHS, RA
 
 
 def tokenize_function(examples, tokenizer):
+    # Reported results use the tokenizer's default right truncation (first
+    # MAX_LENGTH tokens kept). To keep the final tokens instead, set
+    # tokenizer.truncation_side = "left" after from_pretrained -- passing
+    # truncation_side as a call argument here is silently ignored.
     return tokenizer(
         examples["text"],
         truncation=True,
         padding="max_length",
         max_length=MAX_LENGTH,
-        truncation_side="left"
     )
 
 
